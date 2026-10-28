@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demo portofolio troubleshooting link dan tombol website oleh Muhamad Riky.">
+  <title>LinkFix Lab — Demo Perbaikan Link Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+  <header class="site-header">
+    <a class="brand" href="#beranda" aria-label="LinkFix Lab, kembali ke awal"><span class="brand-mark">↗</span> LinkFix <span>Lab</span></a>
+    <nav aria-label="Navigasi utama">
+      <a href="#kasus">Studi kasus</a>
+      <a href="#metode">Metode kerja</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <a class="header-cta" href="https://github.com/riky54" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" id="beranda">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> PORTOFOLIO · FRONT-END TROUBLESHOOTING</p>
+        <h1>Link diklik.<br><em>Tidak terjadi apa-apa?</em></h1>
+        <p class="hero-lead">Contoh interaktif cara saya mendiagnosis tombol dan tautan yang tidak merespons, memperbaiki penyebabnya, lalu menguji hasilnya di desktop dan ponsel.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#kasus">Lihat demonstrasi <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#metode">Cara saya bekerja <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-note"><span class="note-icon">i</span><p>Ini adalah <strong>demo simulasi</strong> untuk menunjukkan pendekatan teknis, bukan perbaikan pada situs klien.</p></div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustrasi proses diagnosis link">
+        <div class="browser-card">
+          <div class="browser-top"><span class="traffic"><i></i><i></i><i></i></span><span class="browser-url">website / halaman / tombol</span><span>⋯</span></div>
+          <div class="browser-body"><div class="fake-lines"><span></span><span></span><span></span></div><div class="pointer-ring"><span>↗</span></div><div class="fake-button">Lihat selengkapnya <span>↗</span></div><div class="scan-label"><span>●</span> Menelusuri area klik</div></div>
+        </div>
+        <div class="floating-tag tag-one"><span class="tag-symbol">⌘</span><div><small>DIAGNOSIS</small><strong>HTML · CSS · JS</strong></div></div>
+        <div class="floating-tag tag-two"><span class="check-symbol">✓</span><div><small>HASIL</small><strong>Link berfungsi</strong></div></div>
+      </div>
+    </section>
+
+    <section class="metrics section-shell" aria-label="Ringkasan demo"><div><strong>03</strong><span>penyebab umum</span></div><div><strong>02</strong><span>kondisi per kasus</span></div><div><strong>01</strong><span>metode pengujian</span></div><p>Mulai dari mereproduksi masalah sampai mencatat perubahan.</p></section>
+
+    <section class="cases section-shell" id="kasus">
+      <div class="section-heading"><div><p class="eyebrow">01 / DEMONSTRASI</p><h2>Temukan penyebabnya.<br><em>Lihat perbaikannya.</em></h2></div><p>Pilih kasus, lalu coba tombol pada kondisi bermasalah dan kondisi yang sudah diperbaiki. Setiap contoh dibuat khusus sebagai simulasi.</p></div>
+      <div class="case-layout">
+        <div class="case-list" role="tablist" aria-label="Pilih contoh masalah link">
+          <button class="case-tab active" type="button" role="tab" id="tab-overlay" aria-controls="panel-demo" aria-selected="true" data-case="overlay"><span class="case-number">01</span><span class="case-name">Lapisan menutupi tombol<small>CSS · z-index</small></span><span aria-hidden="true">↗</span></button>
+          <button class="case-tab" type="button" role="tab" id="tab-pointer" aria-controls="panel-demo" aria-selected="false" tabindex="-1" data-case="pointer"><span class="case-number">02</span><span class="case-name">Klik dinonaktifkan<small>CSS · pointer-events</small></span><span aria-hidden="true">↗</span></button>
+          <button class="case-tab" type="button" role="tab" id="tab-script" aria-controls="panel-demo" aria-selected="false" tabindex="-1" data-case="script"><span class="case-number">03</span><span class="case-name">Navigasi dibatalkan<small>JavaScript · preventDefault</small></span><span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="demo-card" id="panel-demo" role="tabpanel" aria-labelledby="tab-overlay">
+          <div class="demo-top"><span class="live-pill"><span></span> DEMO INTERAKTIF</span><span id="case-counter">KASUS 01 / 03</span></div>
+          <h3 id="case-title">Lapisan transparan menutupi tombol</h3><p id="case-description">Sebuah elemen transparan berada di atas tombol, sehingga klik tidak pernah sampai ke tautan.</p>
+          <div class="state-switch" role="group" aria-label="Kondisi demo"><button class="state-button active" type="button" data-state="broken" aria-pressed="true"><span class="state-dot broken-dot"></span> Sebelum diperbaiki</button><button class="state-button" type="button" data-state="fixed" aria-pressed="false"><span class="state-dot fixed-dot"></span> Sesudah diperbaiki</button></div>
+          <div class="preview" id="preview"><div class="preview-header"><span class="preview-logo">studio<span>.</span></span><span>BERANDA&nbsp;&nbsp; PROYEK&nbsp;&nbsp; KONTAK</span></div><div class="preview-body"><span class="preview-kicker">WEBSITE CONTOH</span><h4>Ide besar dimulai<br>dari satu klik.</h4><p>Di sini tombol seharusnya membawa pengunjung ke bagian detail.</p><div class="preview-action" id="preview-action"><a id="demo-link" href="#tujuan-demo">Lihat detail <span aria-hidden="true">↗</span></a><span class="blocking-layer" id="blocking-layer" aria-hidden="true"></span></div></div></div>
+          <div class="result-box" id="result-box" role="status" aria-live="polite"><span class="result-icon">●</span><span id="result-text">Coba klik tombol “Lihat detail” pada contoh di atas.</span></div>
+          <div class="diagnosis"><div><span>AKAR MASALAH</span><p id="cause-text">Overlay transparan mempunyai z-index lebih tinggi dari tombol.</p></div><div><span>SOLUSI</span><p id="fix-text">Atur urutan lapisan atau hapus overlay yang tidak diperlukan agar tombol menerima klik.</p></div></div>
+          <div id="tujuan-demo" class="target-panel" tabindex="-1"><strong>Tujuan link berhasil dicapai ✓</strong><span>Bagian ini muncul saat tautan bekerja.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section-shell" id="metode"><div class="section-heading"><div><p class="eyebrow">02 / ALUR KERJA</p><h2>Perbaikan yang bisa<br><em>diverifikasi.</em></h2></div><p>Langkah ringkas yang sesuai dengan kebutuhan perbaikan link website.</p></div><div class="steps"><article><span>01 / REPRODUKSI</span><h3>Catat gejala</h3><p>Daftar halaman, tombol, dan perangkat yang mengalami masalah. Uji klik dengan mouse dan keyboard.</p></article><article><span>02 / DIAGNOSIS</span><h3>Telusuri penyebab</h3><p>Periksa <code>href</code>, overlay, <code>pointer-events</code>, event listener, dan error di console browser.</p></article><article><span>03 / PERBAIKAN</span><h3>Ubah seperlunya</h3><p>Perbaiki HTML, CSS, atau JavaScript yang menghalangi navigasi tanpa mengganggu bagian lain.</p></article><article><span>04 / VERIFIKASI</span><h3>Uji & dokumentasikan</h3><p>Ulangi pengujian di desktop dan ponsel, lalu serahkan catatan perubahan untuk pemeliharaan.</p></article></div></section>
+
+    <section class="contact section-shell" id="kontak"><div><p class="eyebrow">03 / TERHUBUNG</p><h2>Ada link yang macet<br>di website Anda?</h2><p>Lihat kode demo ini di GitHub dan diskusikan gejala serta halaman yang perlu diperiksa melalui Freelancer.</p></div><div class="contact-actions"><a class="button button-light" href="https://github.com/riky54" target="_blank" rel="noopener noreferrer">Lihat GitHub <span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://www.freelancer.co.id/u/Muhamadriky12" target="_blank" rel="noopener noreferrer">Profil Freelancer <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer section-shell"><span class="brand"><span class="brand-mark">↗</span> LinkFix <span>Lab</span></span><span>Demo portofolio oleh Muhamad Riky · 2026</span><a href="#beranda">Kembali ke atas ↑</a></footer>
+</body>
+</html>
