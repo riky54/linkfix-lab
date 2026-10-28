@@ -48,7 +48,16 @@ document.getElementById('preview-action').addEventListener('click', event => {
   if (activeState === 'broken' && activeCase === 'pointer' && event.target.id === 'preview-action') setResult('Klik tidak diterima karena pointer-events: none.', 'error');
 });
 link.addEventListener('click', event => {
-  if (activeState === 'broken' && activeCase === 'script') { event.preventDefault(); setResult('Navigasi dibatalkan oleh preventDefault() tanpa aksi lanjutan.', 'error'); return; }
+  if (activeState === 'broken') {
+    event.preventDefault();
+    const messages = {
+      overlay: 'Klik tertahan oleh lapisan transparan di atas tombol.',
+      pointer: 'Klik tidak diterima karena pointer-events: none.',
+      script: 'Navigasi dibatalkan oleh preventDefault() tanpa aksi lanjutan.'
+    };
+    setResult(messages[activeCase], 'error');
+    return;
+  }
   if (activeState === 'fixed') { event.preventDefault(); target.classList.add('show'); setResult('Berhasil! Tautan sekarang membawa pengguna ke bagian detail.', 'success'); target.focus({ preventScroll: true }); }
 });
 render();
